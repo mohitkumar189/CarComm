@@ -39,7 +39,7 @@ public class AppsListAdapter extends RecyclerView.Adapter<AppsListAdapter.MyView
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
         holder.tvAppName.setText(installedAppsDataList.get(position).getAppName());
-        holder.tvAppPackage.setText(installedAppsDataList.get(position).getAppPackage());
+     //   holder.tvAppPackage.setText(installedAppsDataList.get(position).getAppPackage());
         holder.ivAppIcon.setImageDrawable(installedAppsDataList.get(position).getIcon());
     }
 
@@ -54,7 +54,6 @@ public class AppsListAdapter extends RecyclerView.Adapter<AppsListAdapter.MyView
         public MyViewHolder(View itemView) {
             super(itemView);
             tvAppName = (TextView) itemView.findViewById(R.id.tvAppName);
-            tvAppPackage = (TextView) itemView.findViewById(R.id.tvAppPackage);
             ivAppIcon = (ImageView) itemView.findViewById(R.id.ivAppIcon);
 
         }

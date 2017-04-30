@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="40dp">
+
+        <Switch
+            android:id="@+id/switch_front_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="20dp"
+            android:checked="true"
+            android:text="front left"
+            android:textColor="@color/black" />
+
+        <Switch
+            android:id="@+id/switch_front_right"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:checked="true"
+            android:text="front right"
+            android:textColor="@color/black" />
+
+        <Switch
+            android:id="@+id/switch_back_left"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/switch_front_left"
+            android:layout_margin="20dp"
+            android:checked="true"
+            android:text="back left"
+            android:textColor="@color/black" />
+
+        <Switch
+            android:id="@+id/switch_back_right"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/switch_front_right"
+            android:layout_margin="20dp"
+            android:checked="true"
+            android:text="back right"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="40dp">
+
+        <SeekBar
+            android:id="@+id/seekbar_front_left"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="20dp"
+            android:checked="true"
+            android:text="front left"
+            android:textColor="@color/black" />
+
+        <SeekBar
+            android:id="@+id/seekbar_front_right"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:checked="true"
+            android:text="front right"
+            android:textColor="@color/black" />
+
+        <SeekBar
+            android:id="@+id/seekbar_back_left"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/seekbar_front_left"
+            android:layout_margin="20dp"
+            android:checked="true"
+            android:text="back left"
+            android:textColor="@color/black" />
+
+        <SeekBar
+            android:id="@+id/seekbar_back_right"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/seekbar_front_right"
+            android:layout_margin="20dp"
+            android:checked="true"
+            android:text="back right"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+
+</LinearLayout>

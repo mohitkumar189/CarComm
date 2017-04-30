@@ -3,27 +3,23 @@ package in.squarei.carcom.Activities;
 
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
-import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -208,16 +204,16 @@ public abstract class SocialConnectBaseActivity extends AppCompatActivity
     }
 
 
-    public void switchContent(Fragment fragment, boolean addToBackStack,
+    public void switchFragment(Fragment fragment, boolean addToBackStack,
                               boolean add, String tag) {
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
         if (!add) {
 
-            ft.replace(R.id.activity_container, fragment, tag);
+            ft.replace(R.id.dashboardFragmentContainer, fragment, tag);
         } else {
-            ft.add(R.id.activity_container, fragment, tag);
+            ft.add(R.id.dashboardFragmentContainer, fragment, tag);
         }
         if (addToBackStack) {
             ft.addToBackStack(tag);
@@ -225,7 +221,7 @@ public abstract class SocialConnectBaseActivity extends AppCompatActivity
         ft.commit();
     }
 
-    public void popBackStack(String tag) {
+    public void goBackToPrevious(String tag) {
         if (getSupportFragmentManager().getBackStackEntryCount() >= 0) {
             getSupportFragmentManager().popBackStack(tag, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         }
